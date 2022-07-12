@@ -40,6 +40,14 @@
     animation: clouds-animation 25s infinite linear;
 }
 
+.moeda {
+    position: absolute;
+    width: 20px;
+    margin: 250px;
+    
+    animation: clouds-animation 10s infinite linear;
+}
+
 @keyframes pipe-animation {
     from {
         right: -80px;
@@ -80,3 +88,14 @@
         right: 100%;
     }
 }
+/*
+@keyframes moeda-animation {
+    from {
+        right: -20px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+*/
