@@ -1,6 +1,6 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
-
+const moeda = document.querySelector('.moeda');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -9,6 +9,20 @@ const jump = () => {
         mario.classList.remove('jump');
     }, 500);
 }
+/*
+const contador = setInterval(() => {
+
+console.log('contador')
+
+    const moedaPosition = moeda.offsetLeft;
+
+    if (moedaPosition <= 120 && marioPosition > 80 ){
+        moeda.style.animation = 'none';
+        
+               
+    } 
+},5);
+*/
 
 const loop = setInterval(() => {
 
