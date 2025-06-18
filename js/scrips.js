@@ -6,6 +6,7 @@ const moedaSpan = document.getElementById('moedas');
 
 const musicaFundo = document.getElementById('musica-fundo');
 const somGameOver = document.getElementById('som-gameover');
+const somMoeda = document.getElementById('som-moeda');
 
 // Adiciona esta linha para pré-carregar o som do game over:
 somGameOver.load();
@@ -48,6 +49,10 @@ const loop = setInterval(() => {
         moedas++;
         moedaSpan.textContent = moedas;
 
+        /* Adiciona som ao pegar as Moedas */
+        somMoeda.currentTime = 0;
+        somMoeda.play();
+
         /* Faz moeda sumir e voltar depois */
         moeda.style.display = "none";
         moedaColetada = true;
@@ -70,7 +75,7 @@ const loop = setInterval(() => {
         canoJaContado = true;
     }
 
-    if (pipePosition > 120) {
+    if (pipePosition > 120 ) {
         canoJaContado = false;
     }
 
@@ -126,3 +131,6 @@ document.addEventListener('keydown', jump);
 function reiniciarJogo() {
     location.reload();
 }
+
+
+
